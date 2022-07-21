@@ -1,7 +1,7 @@
 import lightbulb
 import hikari
 
-plugin = lightbulb.Plugin("TrackBumpPlugin")
+plugin = lightbulb.Plugin("BumpPlugin")
 
 @plugin.listener(hikari.events.GuildMessageCreateEvent)
 async def track_bump(event: hikari.events.GuildMessageCreateEvent):

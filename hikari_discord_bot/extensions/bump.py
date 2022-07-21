@@ -5,7 +5,7 @@ plugin = lightbulb.Plugin("TrackBumpPlugin")
 
 @plugin.listener(hikari.events.GuildMessageCreateEvent)
 async def track_bump(event: hikari.events.GuildMessageCreateEvent):
-    if str(event.channel_id) != "757071256096079953" and event.author_id != "302050872383242240":
+    if str(event.channel_id) != "757114175381176362" and event.author_id != "302050872383242240":
         return
 
     bump_image = "https://disboard.org/images/bot-command-image-bump.png"

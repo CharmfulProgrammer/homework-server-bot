@@ -1,4 +1,5 @@
 import lightbulb
+import hikari
 import os
 from dotenv import load_dotenv
 

@@ -20,8 +20,6 @@ async def avatar(ctx: lightbulb.Context):
     profile = hikari.Embed().set_image(ctx.author.avatar_url.url)
     await ctx.respond(profile)
 
-
-
 def load(bot: lightbulb.BotApp): 
     bot.add_plugin(plugin)
 

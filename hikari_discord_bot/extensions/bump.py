@@ -3,6 +3,10 @@ import hikari
 
 plugin = lightbulb.Plugin("BumpPlugin")
 
+@plugin.listener(lightbulb.events.SlashCommandInvocationEvent)
+async def track_user_bump(event: lightbulb.events.SlashCommandInvocationEvent):
+    print("hello")
+
 @plugin.listener(hikari.events.GuildMessageCreateEvent)
 async def track_bump(event: hikari.events.GuildMessageCreateEvent):
     if str(event.channel_id) != "757114175381176362" and event.author_id != "302050872383242240":
@@ -12,8 +16,9 @@ async def track_bump(event: hikari.events.GuildMessageCreateEvent):
 
     try:
         # implement a database and scoreboard in futute
+        print(event.embeds[0].image.url)
         if event.embeds[0].image.url == bump_image:
-            pass
+            print(True)
     except AttributeError:
         pass
 
